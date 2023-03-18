@@ -26,6 +26,7 @@
         </dependency>
   </dependencies>
   <build>
+  <finalName>LoginWebApp</finalName>  
   <pluginManagement>
    <plugins>
 <plugin>
@@ -129,7 +130,4 @@
             <url>http://jcenter.bintray.com</url>
         </pluginRepository>
 </pluginRepositories>
-<build>
-    <finalName>LoginWebApp</finalName>
-</build>
 </project>
