@@ -2,7 +2,7 @@
 
 terraform {
   backend "s3" {
-    bucket = "devopswithdeepak-terrafom-backend"
+    bucket = "devops-terrafom-backend"
     key    = "project/remote.tfstate"
     region = "us-east-1"
   }
