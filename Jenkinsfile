@@ -53,9 +53,10 @@ pipeline {
          stage("Docker build"){
 	       steps {
                     sh 'docker version'
-                    sh 'docker build -t devopswithdeepak-docker-webapp-demo .'
+                    sh 'docker build -t devops-docker-webapp-demo .'
                     sh 'docker image list'
-                    sh 'docker tag devopswithdeepak-docker-webapp-demo deepak2717/devopswithdeepak-docker-webapp-demo:devopswithdeepak-docker-webapp-demo'
+                    // sh 'docker tag devopswithdeepak-docker-webapp-demo deepak2717/devopswithdeepak-docker-webapp-demo:devopswithdeepak-docker-webapp-demo'
+                     sh 'docker tag devops-docker-webapp-demo mohit7408/devops-docker-webapp-demo:devops-docker-webapp-demo'
 		
                }
           }
@@ -69,7 +70,7 @@ pipeline {
 
          stage("Push Image to Docker Hub"){
                steps {
-                     sh 'docker push  mohit7408/devopswithdeepak-docker-webapp-demo:devopswithdeepak-docker-webapp-demo'
+                     sh 'docker push  mohit7408/devops-docker-webapp-demo:devops-docker-webapp-demo'
                 }
          }
          stage('Plan') {
