@@ -52,9 +52,6 @@ pipeline {
           }
          stage("Docker build"){
 	       steps {
-		    script {
-                    	unstash 'node_modules'
-                	}
                     sh 'docker version'
                     sh 'docker build -t devops-docker-webapp-demo .'
                     sh 'docker image list'
