@@ -86,6 +86,7 @@ pipeline {
 
                 sh "terraform plan -input=false -out tfplan "
                 sh 'terraform show -no-color tfplan > tfplan.txt'
+		sh 'terraform init -reconfigure'
             }
         }
         stage('Approval') {
